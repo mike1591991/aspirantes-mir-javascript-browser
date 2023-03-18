@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Palindromo</title>
+</head>
+<body>
+  <label for="texto">Escribe algo:</label>
+  <input type="text" id="texto">
+  <button class="btn">Validar</button>
+  <p id="resultado"></p>
+
+  <script type="text/javascript">
+    const input = document.querySelector('#texto');
+    const resultado = document.querySelector('#resultado');
+    const boton = document.querySelector('.btn');
+
+    function palindrome(str) {
+      var len = str.length;
+      for (var i = 0; i < len/2; i++) {
+        if (str[i] !== str[len - 1 - i]) {
+          return 'no es palindroma';
+        }
+      }
+      return 'si es palindroma';
+    }
+
+    boton.addEventListener('click', function(){
+      resultado.textContent = palindrome(input.value);
+    });
+  </script>
+</body>
+</html>
