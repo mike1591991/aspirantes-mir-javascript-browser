@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejercicio 1</title>
+    <link type="text/css" rel="stylesheet" href="css/main.css" />
+
+  </head>
+  <body >
+    <form class="f_Agrega" method="post">
+      <input type="text" class="i_Agrega" placeholder="Ingresa tu nueva tarea" onfocus="this.value=''"/>
+      <input type="submit" onclick="handleSubmit()" class="b_Agrega" value="Agregar" id="submit"/><br>
+    </form><br>
+    <form class="f_Lista">
+      <div id="container">
+      </div>
+      <button type="button" class="b_borrar" onclick="handleDelete()">Borrar todas las tareas</button>
+      <button type="button" class="b_borrar" onclick="tareasCompletadas()">Tareas completadas</button>
+      <button type="button" class="b_borrar" onclick="tareasNoCompletas()">Tareas no completadas</button>
+      <button type="button" class="b_borrar" onclick="allTareas()">Todas las tareas</button>
+    </form>
+    <script src="js/index.js" charset="utf-8"></script>
+  </body>
+</html>
