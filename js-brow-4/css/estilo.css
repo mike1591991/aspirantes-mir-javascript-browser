@@ -1,0 +1,18 @@
+a+ul {
+    display: none;
+}
+
+a:hover+ul {
+    display: block
+}
+
+#menu a {
+    display: block;
+    text-decoration: none;
+}
+
+#menu:hover ul,
+#menu:hover ul li:hover ul,
+#menu:hover ul li:hover ul li:hover ul {
+    display: block;
+}
